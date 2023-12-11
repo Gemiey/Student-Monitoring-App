@@ -1,0 +1,29 @@
+
+<body>
+    <div id="profileContainer" (click)="toggleStatusDropdown()">
+        <div id="profileIcon">
+          <div class="whiteDot"></div>
+          <div class="dot"[ngClass]="getStatusClass()">
+          </div>
+        </div>
+        <div id="statusDropdown">
+          <div class="statusOption" (click)="setStatus('online')">
+            <span style="color: green;">Online</span>
+          </div>
+          <div style="border-bottom: 1px solid #ddd;"></div>
+          <div class="statusOption" (click)="setStatus('idle')">
+            <span style="color: orange;">Idle</span>
+          </div>
+          <div style="border-bottom: 1px solid #ddd;"></div>
+          <div class="statusOption" (click)="setStatus('offline')">
+            <span style="color: red;">Offline</span>
+          </div>
+        </div>
+      </div>
+
+<!-- Display active time -->
+<span id="counter"></span>
+
+<!-- Display inactive time -->
+<span id="inactiveCounter"></span>
+</body>

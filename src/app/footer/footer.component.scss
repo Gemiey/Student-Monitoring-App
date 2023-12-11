@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+header img {
+    max-width: 80%;
+    height: auto;
+}
+
+footer {
+    background-color: black; /* Add your desired background color */
+    text-align: center;
+    padding: 20px 0;
+    color: #fff; /* Add your desired text color */
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 24px;
+    color: #fff;
+}
+
+.content {
+    padding: 20px;
+}

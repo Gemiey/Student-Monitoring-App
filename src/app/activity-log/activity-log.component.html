@@ -1,0 +1,53 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<div class="widget">
+    <div class="widget-content">
+      <div class="column-wrap">
+        <div class="coloumn">
+          <div class="activity">
+            <div class="btn btn-default pull-right" style="margin-top:5px;">
+              <i class="aroicon-action-filter"></i>
+
+              <button class="btn btn-info" (click)="filterVideo()">Video Activity</button>
+              <button class="btn btn-info" (click)="filterOpen()">Start Course Activity</button>
+              <button class="btn btn-info" (click)="filterComplete()">Completed Course Activity</button>
+              <button class="btn btn-info" (click)="reload()">Show All Activity</button>
+
+              
+            </div>
+          <h3>Activity Log</h3>
+          <div class="activity-items">
+            
+            
+            <div class="activity-item-wrap activity-date">
+              <h4 class="activity-date">2023</h4>
+            </div>
+
+              <div class="list-group-item clearfix" *ngFor="let item of filteredData">
+
+            <!-- start activity -->
+           
+            <div class="activity-item-wrap activity-call">
+              <div class="activity-item-badge"><i class="aroicon-action-send-message">
+                <div *ngIf="item.activity_type == 'v'"> <img src="https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcQzwnig8L0OkKxBRFRkctvUGlP9p5su_edC0PYhw1OBWIKTWrXP-ryWFL2BjVQGbjQl"
+                    style="max-height:40px">  </div>
+                <div *ngIf="item.activity_type == 'c'"> <img src="https://static.vecteezy.com/system/resources/previews/001/932/982/original/text-book-open-with-pencil-writing-free-vector.jpg"
+                    style="max-height:40px">  </div>
+                <div *ngIf="item.activity_type == 'g'"> <img src="https://img.freepik.com/free-vector/student-graduation-cap-with-gold-tassel-ribbon_107791-16542.jpg?size=626&ext=jpg&ga=GA1.1.1412446893.1698796800&semt=ais"
+                        style="max-height:40px">  </div>
+                
+              </i></div>
+              <div class="activity-item">
+                <div class="activity-item-meta">
+                  <div class="activity-user"> {{name[0]}} </div>
+                    <p class="activity-summary"><strong> {{name}}  </strong> from {{grade}}  {{item.activity}}</p>
+                    <p class="activity-timestamp">{{item.timestamp}}</p>
+                </div>
+                <div class="activity-item-details">
+                </div>
+              </div>
+            </div></div>
+            <!-- end activity -->
